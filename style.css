@@ -334,7 +334,7 @@ footer {
 footer h4 {
   flex: 1 1 40rem;
   color: white;
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1.2rem + 0.5vw);
 }
 footer ul {
   flex: 1 1 40rem;
@@ -379,6 +379,7 @@ footer ul {
   .burger {
     display: block;
     position: relative;
+    cursor: pointer;
   }
   .burger span {
     padding: 0.2rem 2rem;
@@ -406,44 +407,28 @@ footer ul {
     transition: transform 1s ease;
   }
 
+  .nav-open {
+    transform: translateX(-100%);
+  }
+
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+  }
+
   .hero {
     width: 100%;
   }
 
   .hero-intro p {
     padding: 5rem 3rem;
-  }
-  .menu-check {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(5%, -50%);
-    width: 4rem;
-    height: 4rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 10;
-  }
-
-  .menu-check:checked + .nav-links {
-    transform: translate(-100%);
-  }
-
-  .menu-check:checked ~ .burger span {
-    background: white;
-  }
-
-  .menu-check:checked ~ .burger span:nth-child(1) {
-    transform: translateX(20%) rotateZ(45deg) translateY(300%);
-  }
-
-  .menu-check:checked ~ .burger span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-check:checked ~ .burger span:nth-child(3) {
-    transform: translateX(20%) rotateZ(-45deg) translateY(-300%);
   }
 
   /* ABOUT SECTION */
@@ -460,6 +445,10 @@ footer ul {
   /* IF YOU WANTED A FULL RESPONSIVE GALLEY OF WHATEVER IMAGES, YOU CAN WRITE THIS SIMPLE LINE OF CODE */
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+  .form-wrapper span {
+    font-size: 12rem;
   }
 
   .contact-image {
