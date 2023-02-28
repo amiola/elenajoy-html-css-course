@@ -199,6 +199,7 @@ nav {
 .about-text h2 {
   padding-top: 4rem;
   font-family: "Vibes";
+  font-size: calc(6rem + 1vh);
 }
 
 .about-text h3 {
@@ -286,7 +287,7 @@ nav {
 }
 
 .form-wrapper h2 {
-  font-size: var(--big);
+  font-size: var(--header2);
 }
 .form-wrapper span {
   font-size: var(--big);
